@@ -9,10 +9,8 @@ namespace littlegiant\CatalogManager;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
 use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
 use SilverStripe\Forms\FormAction;
-use SilverStripe\View\ViewableData_Customised;
-use SilverStripe\CMS\Controllers;
-use SilverStripe\Control\HTTPResponse;
-use SilverStripe\Versioned;
+use SilverStripe\Versioned\Versioned;
+use SilverStripe\Control\Controller;
 
 class CatalogDataObjectGridFieldDetailForm extends GridFieldDetailForm
 {

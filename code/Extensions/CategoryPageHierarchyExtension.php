@@ -8,7 +8,7 @@ namespace littlegiant\CatalogManager;
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Core\ClassInfo;
-use SilverStripe\CMS\Controllers;
+use SilverStripe\Control\Controller;
 use SilverStripe\Admin\LeftAndMain;
 
 class CategoryPageHierarchyExtension extends DataExtension

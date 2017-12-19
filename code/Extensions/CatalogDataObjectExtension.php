@@ -7,6 +7,7 @@
 namespace littlegiant\CatalogManager;
 
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\DB;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\DropdownField;

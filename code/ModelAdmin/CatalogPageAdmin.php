@@ -12,6 +12,9 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\FormAction;
+use SilverStripe\ORM\DB;
+use SilverStripe\Forms\Form;
+use SilverStripe\Control\Controller;
 
 class CatalogPageAdmin extends ModelAdmin
 {

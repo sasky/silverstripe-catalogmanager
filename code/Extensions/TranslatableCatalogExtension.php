@@ -11,6 +11,9 @@ use SilverStripe\Security\Permission;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormAction;
+use SilverStripe\Core\Extension;
+use SilverStripe\Forms\Form;
+use SilverStripe\i18n\i18n;
 
 class TranslatableCatalogExtension extends Extension
 {
