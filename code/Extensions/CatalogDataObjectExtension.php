@@ -3,6 +3,16 @@
 /**
  * Class CatalogDataObjectExtension
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\Versioned;
+
 class CatalogDataObjectExtension extends DataExtension
 {
     /**

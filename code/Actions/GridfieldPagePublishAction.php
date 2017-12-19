@@ -4,6 +4,18 @@
  * Gridfield Action to publish / unpublish a page in catalog manager
  * @author Werner Krauß <werner.krauss@netwerkstatt.at>
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\Forms\GridField\GridField_ActionProvider;
+use SilverStripe\Forms\GridField\GridField_ColumnProvider;
+use SilverStripe\Forms\GridField\GridField_FormAction;
+use SilverStripe\Forms\GridField\GridFieldComponent;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Security\Permission;
+use SilverStripe\Versioned\Versioned;
+use SilverStripe\ORM\ValidationException;
+
 class GridfieldPagePublishAction implements GridField_ColumnProvider, GridField_ActionProvider
 {
     /**

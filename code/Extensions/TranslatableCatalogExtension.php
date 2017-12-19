@@ -3,6 +3,15 @@
 /**
  * Class TranslatableCatalogExtension
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\Security\Member;
+use SilverStripe\Security\Permission;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FormAction;
+
 class TranslatableCatalogExtension extends Extension
 {
 

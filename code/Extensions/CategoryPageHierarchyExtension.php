@@ -3,6 +3,14 @@
 /**
  * Class CategoryPageHierarchyExtension
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\ClassInfo;
+use SilverStripe\CMS\Controllers;
+use SilverStripe\Admin\LeftAndMain;
+
 class CategoryPageHierarchyExtension extends DataExtension
 {
 

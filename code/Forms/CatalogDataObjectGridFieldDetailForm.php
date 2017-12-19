@@ -3,6 +3,17 @@
 /**
  * Class CatalogDataObjectGridFieldDetailForm
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\Forms\GridField\GridFieldDetailForm;
+use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\View\ViewableData_Customised;
+use SilverStripe\CMS\Controllers;
+use SilverStripe\Control\HTTPResponse;
+use SilverStripe\Versioned;
+
 class CatalogDataObjectGridFieldDetailForm extends GridFieldDetailForm
 {
 }
@@ -66,7 +77,7 @@ class CatalogDataObjectGridFieldDetailForm_ItemRequest extends GridFieldDetailFo
     /**
      * @param $data
      * @param $form
-     * @return HTMLText|ViewableData_Customised
+     * @return v|ViewableData_Customised
      */
     public function doEnable($data, $form)
     {

@@ -3,6 +3,16 @@
 /**
  * Class CatalogPageAdmin
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\Admin\ModelAdmin;
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\FormAction;
+
 class CatalogPageAdmin extends ModelAdmin
 {
     /**

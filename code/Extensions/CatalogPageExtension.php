@@ -3,6 +3,16 @@
 /**
  * Class CatalogPageExtension
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\ORM\DataList;
+use SilverStripe\CMS\Model\SiteTree;
+
 class CatalogPageExtension extends DataExtension
 {
     /**

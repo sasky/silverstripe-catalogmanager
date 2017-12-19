@@ -3,6 +3,13 @@
 /**
  * Class CatalogPageGridFieldDetailForm
  */
+
+namespace littlegiant\CatalogManager;
+
+use SilverStripe\Forms\GridField\GridFieldDetailForm;
+use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
+use SilverStripe\Versioned;
+
 class CatalogPageGridFieldDetailForm extends GridFieldDetailForm
 {
 }
