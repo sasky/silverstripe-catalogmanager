@@ -7,7 +7,6 @@
 namespace littlegiant\CatalogManager;
 
 use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\View\Requirements;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -18,19 +17,23 @@ use SilverStripe\Control\Controller;
 
 class CatalogPageAdmin extends ModelAdmin
 {
+  
     /**
      * @config
      * @var string
      */
     private static $menu_icon = 'silverstripe-catalogmanager/images/catalog.png';
 
-    /**
-     * Initialize requirements for this view
-     */
-    public function init()
+    // This allows this class to be hidden, but it's subclasses to be shown
+    // In the CMS Main Menu
+    public function canView($member = null)
     {
-        parent::init();
-        Requirements::javascript(CMS_DIR . '/javascript/CMSMain.EditForm.js');
+        $class = get_called_class();
+        if ($class === self::class) {
+            return false;
+        }
+
+        return parent::canView($member);
     }
 
     /**
@@ -40,9 +43,9 @@ class CatalogPageAdmin extends ModelAdmin
     {
         $model = singleton($this->modelClass);
         if ($model->has_extension('CatalogPageExtension') || $model->has_extension('CatalogDataObjectExtension')) {
-            $list = $this->getList()->setDataQueryParam(array(
+            $list = $this->getList()->setDataQueryParam([
                 'Versioned.stage' => 'Stage'
-            ));
+            ]);
 
             $listField = GridField::create(
                 $this->sanitiseClassName($this->modelClass),
@@ -101,6 +104,7 @@ class CatalogPageAdmin extends ModelAdmin
         }
 
         $this->extend('updateEditForm', $form);
+
         return $form;
     }
 
@@ -121,7 +125,7 @@ class CatalogPageAdmin extends ModelAdmin
         if ($model::config()->get('automatic_live_sort') == true) {
             foreach ($pages as $page) {
                 if ($page instanceof $modelClass) {
-                    DB::query("UPDATE " . $modelClass . "_Live SET " . $model->getSortFieldname() . "=" . $page->{$model->getSortFieldname()} . " WHERE ID=" . $page->ID);
+                    DB::query('UPDATE ' . $modelClass . '_Live SET ' . $model->getSortFieldname() . '=' . $page->{$model->getSortFieldname()} . ' WHERE ID=' . $page->ID);
                 }
             }
         }
