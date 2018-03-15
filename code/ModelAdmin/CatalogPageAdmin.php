@@ -17,7 +17,11 @@ use SilverStripe\Control\Controller;
 
 class CatalogPageAdmin extends ModelAdmin
 {
-  
+    /**
+     * @config
+     * @var string
+     */
+    private static $url_segment = 'catalog-page-admin';
     /**
      * @config
      * @var string
